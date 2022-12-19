@@ -10,8 +10,7 @@ PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
 intents=discord.Intents.all()
-intents.message_content = True
-client=discord.Client(intents=intents)
+client=discord.Client()
 
 @client.event
 async def on_ready():
