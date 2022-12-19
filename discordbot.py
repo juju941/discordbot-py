@@ -22,12 +22,7 @@ async def on_message(message):
         return
     
         if message.content.startswith("!명령어"):
-        embed = discord.Embed(
-        title = '아래는 명령어 목록이예요.',
-        description = '명령어를 입력해봐요.',
-        colour = discord.Colour.red()
-        )
-        
+        embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
         embed.add_field(name="!행운", value="행운을 올려보세요!", inline=False)
         embed.add_field(name="!가이드북", value="가이드북 주소를 알려드려요!", inline=False)
         embed.add_field(name="!패치파일", value="패치파일 주소를 알려드려요!", inline=False)
