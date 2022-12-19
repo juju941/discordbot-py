@@ -9,30 +9,19 @@ load_dotenv()
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
+intents.member = True
 client = discord.Client()
 
 @client.event
 async def on_ready():
     print(f'Logged in as {client.user}.')
     
-@bot.event
-async def on_member_join(member):
-    welcome_channel = bot.get_channel(1054347595348193340)
-    print(f"{member} has joined!")
-    await welcome_channel.send(f"{member.mention} has joined the server! Thank you")
-    try:
-        await member.send(f"Hey {member.display_name}! Thank you for joining the server")
-    except:
-        await welcome_channel.send(f"{member.mention} I can't dm you, but thank you for joining!")
-
-        
-    role = discord.utils.get(member.server.roles, name="name-of-your-role") #  Gets the member role as a `role` object
-    await client.add_roles(member, role) # Gives the role to the user
-    print("Added role '" + role.name + "' to " + member.name)
 @client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+async def on_member_join(member):
+    guild = client.get_guild(1054347567892271234)
+    channel = guild.get_channel(1054347595348193340)
+    await channel.send(f'{member.mention}님, 암명서버에 어서오세요!)
+        
     
     if message.content.startswith(f'{PREFIX}명령어'):
         embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
