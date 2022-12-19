@@ -14,15 +14,18 @@ client = discord.Client()
 async def on_ready():
     print(f'Logged in as {client.user}.')
     
-    @client.event
-    async def on_member_join(member):
-        channel = bot.get_channel(808342847748440084)
-        await channel.send(f"{member} 님이 암명서버에 오셨어요.")
+@client.event
+async def on_member_join(member):
+    fmt = '''
+    {1.name}에 오신걸 환영합니다! {0.mention}님!'''
+    channel = member.server.get_channel('808342847748440084')
+    await client.send_message(channel, fmt.format(member, member.server))
 
-    @client.event
-    async def on_member_remove(member):
-        channel = bot.get_channel(808342847748440084)
-        await channel.send(f"{member} 님이 암명서버에서 나가셨어요.") 
+@client.event
+async def on_member_remove(member):
+    channel = member.server.get_channel('808342847748440084')
+    fmt = '{0.mention}님이 서버에서 나가셨습니다!'
+    await client.send_message(channel, fmt.format(member, member.server))
 
 @client.event
 async def on_message(message):
