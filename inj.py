@@ -11,9 +11,7 @@ load_dotenv()
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
-intents=discord.Intents.all()
-client=discord.Client(intents=intents)
-
+client = discord.Client()
 _channel = '1054094915249901648'
 
 @client.event
