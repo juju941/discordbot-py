@@ -17,7 +17,10 @@ async def on_ready():
     
 @client.event
 async def on_member_join(member):
-   await client.get_channel(1054347595348193340).send(f"{member.name} has joined")
+  guild = client.get_guild(1054347567892271234)
+  channel = guild.get_channel(1054347595348193340)
+  emb = discord.Embed(title="NEW MEMBER",description=f"Thanks {member.name} for joining!")
+  await channel.send(member.mention, embed=emb)
 
 @client.event
 async def on_member_remove(member):
