@@ -16,16 +16,13 @@ async def on_ready():
     
 @client.event
 async def on_member_join(member):
-    fmt = '''
-    {1.name}에 오신걸 환영합니다! {0.mention}님!'''
-    channel = member.server.get_channel('808342847748440084')
-    await client.send_message(channel, fmt.format(member, member.server))
+    channel = discord.utils.get(member.guild.channels, name="ㅇㅇㅇ")
+    await channel.send(f"{member.mention} has just joined the server!")
 
 @client.event
 async def on_member_remove(member):
-    channel = member.server.get_channel('808342847748440084')
-    fmt = '{0.mention}님이 서버에서 나가셨습니다!'
-    await client.send_message(channel, fmt.format(member, member.server))
+    channel = discord.utils.get(member.guild.channels, name="ㅇㅇㅇ")
+    await channel.send(f"{member.mention} has left the server.")
 
 @client.event
 async def on_message(message):
