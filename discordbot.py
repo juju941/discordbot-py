@@ -54,7 +54,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
                             
     if message.content.startswith(f'{PREFIX}진알파 조합식'):
-        embed=discord.Embed(title="알파윙 조합식", description="알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
+        embed=discord.Embed(title="진알파윙 조합식", description="진알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}케루빔 조합식'):
