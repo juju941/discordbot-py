@@ -18,7 +18,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     welcomembed=discord.Embed(title="환-영", description=f"{member.name}님", color=0xffae00)
-    await message.get_channel(1054347595348193340).send(embed=welcomeembed)
+    await message.get_channel(1054347595348193340).send(embed=welcomembed)
         
     
     if message.content.startswith(f'{PREFIX}명령어'):
