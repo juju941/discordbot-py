@@ -37,25 +37,29 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}가이드북'):
-        embed=discord.Embed(title="가이드북 바로가기", description="[바로가기](https://cafe.naver.com/twguide/2?boardType=L) 링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
+        embed=discord.Embed(title="가이드북 바로가기", description="[바로가기](https://cafe.naver.com/twguide/2?boardType=L) \n링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
         embed.set_footer(text="MADE BY 빛/신")
         await message.channel.send(embed=embed)
         
     if message.content.startswith(f'{PREFIX}패치파일'):
-        embed=discord.Embed(title="패치파일 바로가기", description="[바로가기](https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing) 링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
+        embed=discord.Embed(title="패치파일 바로가기", description="[바로가기](https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing) \n링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
         await message.channel.send(embed=embed)
         
     if message.content.startswith(f'{PREFIX}알파윙 조합식'):
-        await message.channel.send("```리틀 그레스 윙 3합\n에메랄드 20개\n천공의 깃털 20개```")
+        embed=discord.Embed(title="알파윙 조합식", description="리틀 그레스 윙 3합\n에메랄드 20개\n천공의 깃털 20개", color=0x9fbcfe)
+        await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}천사날개 조합식'):
-        await message.channel.send("```리틀 플라티나 윙 3합\n에메랄드 20개\n천공의 깃털 20개```")
-
+        embed=discord.Embed(title="알파윙 조합식", description="리틀 플라티나 윙 3합\n에메랄드 20개\n천공의 깃털 20개", color=0x9fd5fe)
+        await message.channel.send(embed=embed)
+                            
     if message.content.startswith(f'{PREFIX}진알파 조합식'):
-        await message.channel.send("```알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개```")
+        embed=discord.Embed(title="알파윙 조합식", description="알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
+        await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}케루빔 조합식'):
-         await message.channel.send("```천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개```")
+        embed=discord.Embed(title="알파윙 조합식", description="천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0xa9aeb7)
+        await message.channel.send(embed=embed)
 
 try:
     client.run(TOKEN)
