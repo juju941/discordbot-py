@@ -19,11 +19,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content == f'{PREFIX}call':
-        await message.channel.send("callback!")
+    if message.content == f'{PREFIX}행운':
+        await channel.send(message.author.name +'님 오늘은 좋은걸 얻을거 같아요!!')
 
-    if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith(f'{PREFIX}가이드북'):
+        await message.channel.send('await channel.send("https://cafe.naver.com/twguide/2?boardType=L")')
 
 
 try:
