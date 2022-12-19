@@ -1,10 +1,10 @@
 from cmath import log
 from distutils.sysconfig import PREFIX
+from captcha.image import ImageCaptcha
 import discord
 from dotenv import load_dotenv
 import os
 import random
-from captcha.image import ImageCaptcha
 import time
 load_dotenv()
 
