@@ -37,10 +37,13 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}가이드북'):
-        await message.channel.send('https://cafe.naver.com/twguide/2?boardType=L')
+        embed=discord.Embed(title="가이드북 바로가기",url=https://cafe.naver.com/twguide/2?boardType=L, description=message.author.name +"님, 링크를 클릭하시면 바로 이동합니다.", color=0xffae00)
+        embed.set_footer(text=MADE BY 빛/신)
+        await message.channel.send(embed=embed)
         
     if message.content.startswith(f'{PREFIX}패치파일'):
-        await message.channel.send('https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing')
+        embed=discord.Embed(title="패치파일 바로가기",url=https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing, description=message.author.name +"님, 링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
+        await message.channel.send(embed=embed)
         
     if message.content.startswith(f'{PREFIX}알파윙 조합식'):
         await message.channel.send("```리틀 그레스 윙 3합\n에메랄드 20개\n천공의 깃털 20개```")
