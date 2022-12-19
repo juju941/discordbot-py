@@ -19,9 +19,10 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     print("member join")
-    channel = client.get_channel(1054347595348193340)
+    channel = client.get_channel(808342847748440084)
     welcomembed=discord.Embed(title="환-영", description=f"{member.name}님", color=0xffae00)
-    await channel.send(f"{member.mention}님, 암명서버에 어서오세요!")       
+    await channel.send(f"{member.mention}님, 암명서버에 어서오세요!")
+    
 @client.event
 async def on_message(message):
     
@@ -54,15 +55,15 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}천사날개 조합식'):
-        embed=discord.Embed(title="알파윙 조합식", description="리틀 플라티나 윙 3합\n에메랄드 20개\n천공의 깃털 20개", color=0x9fd5fe)
+        embed=discord.Embed(title="천사날개 조합식", description="리틀 플라티나 윙 3합\n에메랄드 20개\n천공의 깃털 20개", color=0x9fd5fe)
         await message.channel.send(embed=embed)
                             
     if message.content.startswith(f'{PREFIX}진알파 조합식'):
-        embed=discord.Embed(title="진알파윙 조합식", description="진알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
+        embed=discord.Embed(title="진알파 조합식", description="진알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}케루빔 조합식'):
-        embed=discord.Embed(title="알파윙 조합식", description="천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0xa9aeb7)
+        embed=discord.Embed(title="케루빔 조합식", description="천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0xa9aeb7)
         await message.channel.send(embed=embed)
 
 try:
