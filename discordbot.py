@@ -19,8 +19,8 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     print("member join")
-    welcomembed=discord.Embed(title="신규유저", description=f"{member.name}님이 암명서버에 오셨어요", color=0xffae00)
-    await channel.get_channel(1054347595348193340).send(embed=welcomembed)       
+    channel = client.get_channel(1054347595348193340)
+    await channel.send(f"{member.mention}님, 암명서버에 어서오세요!")       
     
     if message.content.startswith(f'{PREFIX}명령어'):
         embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
