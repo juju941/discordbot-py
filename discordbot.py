@@ -10,7 +10,7 @@ PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
 intents=discord.Intents.all()
-client=discord.Client(intents=intents, activity=discord.Streaming(name="난 뚜뚜킹이야 !명령어를 입력해봐 !!")
+client=discord.Client(intents=intents, activity=discord.game(name="난 뚜뚜킹이야 !명령어를 입력해봐 !!")
 
 @client.event
 async def on_ready():
