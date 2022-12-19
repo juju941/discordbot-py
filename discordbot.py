@@ -16,10 +16,10 @@ client=discord.Client(intents=intents)
 async def on_ready():
     print(f'Logged in as {client.user}.')
         await client.change_presence(status=discord.Status.online)
-    game = discord.Game("시작하는 중...")
+        game = discord.Game("시작하는 중...")
         await client.change_presence(status=discord.Status.online, activity=game)
         while True:
-    game = discord.Game("난 뚜뚜킹이야!!")
+        game = discord.Game("난 뚜뚜킹이야!!")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(3)
     
