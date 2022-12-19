@@ -10,11 +10,10 @@ PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
 intents=discord.Intents.all()
-client=discord.Client(intents=intents)
+client=discord.Client(intents=intents, activity=discord.Streaming(name="난 뚜뚜킹이야 !명령어를 입력해봐 !!")
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Streaming(name="난 뚜뚜킹이야 !명령어를 입력해봐 !!"))
     print(f'Logged in as {client.user}.')
     
 @client.event
