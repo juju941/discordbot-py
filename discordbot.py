@@ -10,12 +10,13 @@ PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
 intents=discord.Intents.all()
-client=discord.Client(intents=intents, activity=discord.game(name="난 뚜뚜킹이야 !명령어를 입력해봐 !!")
+client=discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
     print(f'Logged in as {client.user}.')
-    
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='난 뚜뚜킹이야 !명령어를 입력해봐 !!'))
+                      
 @client.event
 async def on_member_join(member):
     print("member join")
