@@ -30,7 +30,7 @@ async def on_message(message):
             embed.add_field(name="!알파윙 조합식", value="알파윙 조합식을 알려드려요!", inline=False)
             embed.add_field(name="!진알파 조합식", value="진알파 조합식을 알려드려요!", inline=False)
             embed.add_field(name="!케루빔 조합식", value="케루빔 조합식을 알려드려요!", inline=False)
-                await client.send_message(channel,embed=embed)
+            await client.send_message(channel,embed=embed)
 
     if message.content.startswith(f'{PREFIX}행운'):
         await message.channel.send(message.author.name +"님 오늘은 좋은걸 얻을거 같아요!!")
