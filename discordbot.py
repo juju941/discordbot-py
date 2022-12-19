@@ -33,7 +33,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}행운'):
-        await message.channel.send(message.author.name +"님 오늘은 좋은걸 얻을거 같아요!!")
+        embed=discord.Embed(title="행운 올려보기", description=message.author.name +"님 오늘은 좋은걸 얻을거 같아요!!", color=gold)
 
     if message.content.startswith(f'{PREFIX}가이드북'):
         await message.channel.send('https://cafe.naver.com/twguide/2?boardType=L')
