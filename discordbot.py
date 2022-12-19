@@ -9,18 +9,19 @@ load_dotenv()
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
-client=discord.Client()
+intents=discord.Intents.all()
+client=discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
     print(f'Logged in as {client.user}.')
     
 @client.event
-   async def on_member_join(member):
+async def on_member_join(member):
     print("member join")
-    channel = client.get_channel(808342847748440084)
-    await channel.send(f"{member.mention}님, 암명서버에 어서오세요!")
-    
+    channel = client.get_channel(1054347595348193340)
+    welcomembed=discord.Embed(title="환-영", description=f"{member.name}님", color=0xffae00)
+    await channel.send(f"{member.mention} 암명서버에 어서오세요 ! <#1054375927250952212>공지사항을 읽어주세요")       
     
     if message.content.startswith(f'{PREFIX}명령어'):
         embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
@@ -61,7 +62,6 @@ async def on_ready():
     if message.content.startswith(f'{PREFIX}케루빔 조합식'):
         embed=discord.Embed(title="알파윙 조합식", description="천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0xa9aeb7)
         await message.channel.send(embed=embed)
-          
 
 try:
     client.run(TOKEN)
