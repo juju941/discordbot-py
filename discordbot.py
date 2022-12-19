@@ -37,12 +37,12 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}가이드북'):
-        embed=discord.Embed(title="가이드북 바로가기",url=https://cafe.naver.com/twguide/2?boardType=L, description=message.author.name +"님, 링크를 클릭하시면 바로 이동합니다.", color=0xffae00)
+        embed=discord.Embed(title="가이드북 바로가기", description="[바로가기](https://cafe.naver.com/twguide/2?boardType=L)" message.author.name +"님, 링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
         embed.set_footer(text=MADE BY 빛/신)
         await message.channel.send(embed=embed)
         
     if message.content.startswith(f'{PREFIX}패치파일'):
-        embed=discord.Embed(title="패치파일 바로가기",url=https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing, description=message.author.name +"님, 링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
+        embed=discord.Embed(title="패치파일 바로가기", description="[바로가기](https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing)" message.author.name +"님, 링크를 클릭하시면 바로 이동합니다.", color=0x4df038)
         await message.channel.send(embed=embed)
         
     if message.content.startswith(f'{PREFIX}알파윙 조합식'):
