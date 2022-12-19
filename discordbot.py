@@ -20,7 +20,7 @@ async def on_ready():
 async def on_member_join(member):
     guild = client.get_guild(1054347567892271234)
     channel = guild.get_channel(1054347595348193340)
-    await channel.send(f'{member.mention}님, 암명서버에 어서오세요!)
+    await channel.send(f'{member.mention}님, 암명서버에 어서오세요!'):
         
     
     if message.content.startswith(f'{PREFIX}명령어'):
