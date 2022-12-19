@@ -4,6 +4,8 @@ import discord
 from dotenv import load_dotenv
 import os
 import random
+from captcha.image import ImageCaptcha
+import time
 load_dotenv()
 
 PREFIX = os.environ['PREFIX']
