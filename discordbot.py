@@ -22,15 +22,15 @@ async def on_message(message):
         return
     
         if message.content.startswith(f'{PREFIX}명령어'):
-        embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
-        embed.add_field(name="!행운", value="행운을 올려보세요!", inline=False)
-        embed.add_field(name="!가이드북", value="가이드북 주소를 알려드려요!", inline=False)
-        embed.add_field(name="!패치파일", value="패치파일 주소를 알려드려요!", inline=False)
-        embed.add_field(name="!천사날개 조합식", value="천사날개 조합식을 알려드려요!", inline=False)
-        embed.add_field(name="!알파윙 조합식", value="알파윙 조합식을 알려드려요!", inline=False)
-        embed.add_field(name="!진알파 조합식", value="진알파 조합식을 알려드려요!", inline=False)
-        embed.add_field(name="!케루빔 조합식", value="케루빔 조합식을 알려드려요!", inline=False)
-        await client.send_message(channel,embed=embed)
+            embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
+            embed.add_field(name="!행운", value="행운을 올려보세요!", inline=False)
+            embed.add_field(name="!가이드북", value="가이드북 주소를 알려드려요!", inline=False)
+            embed.add_field(name="!패치파일", value="패치파일 주소를 알려드려요!", inline=False)
+            embed.add_field(name="!천사날개 조합식", value="천사날개 조합식을 알려드려요!", inline=False)
+            embed.add_field(name="!알파윙 조합식", value="알파윙 조합식을 알려드려요!", inline=False)
+            embed.add_field(name="!진알파 조합식", value="진알파 조합식을 알려드려요!", inline=False)
+            embed.add_field(name="!케루빔 조합식", value="케루빔 조합식을 알려드려요!", inline=False)
+                await client.send_message(channel,embed=embed)
 
     if message.content.startswith(f'{PREFIX}행운'):
         await message.channel.send(message.author.name +"님 오늘은 좋은걸 얻을거 같아요!!")
