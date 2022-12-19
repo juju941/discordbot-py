@@ -21,7 +21,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if message.content.startswith(f'{PREFIX}행운'):
+    if message.content.startswith(f'{PREFIX}명령어'):
         embed=discord.Embed(title="!명령어", description="아래의 명령어를 입력해보세요!!", color=0xff0000)  
         embed.add_field(name="!행운", value="행운을 올려보세요!", inline=False)
         embed.add_field(name="!가이드북", value="가이드북 주소를 알려드려요!", inline=False)
@@ -41,16 +41,16 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}패치파일'):
         await message.channel.send('https://drive.google.com/file/d/1wN9usx5rJm0fIXcba2cXDIyJMqrjFFib/view?usp=sharing')
         
-    if message.content.startswith(f'{PREFIX}!알파윙 조합식'):
+    if message.content.startswith(f'{PREFIX}알파윙 조합식'):
         await message.channel.send("```리틀 그레스 윙 3합\n에메랄드 20개\n천공의 깃털 20개```")
 
-    if message.content.startswith(f'{PREFIX}!천사날개 조합식'):
+    if message.content.startswith(f'{PREFIX}천사날개 조합식'):
         await message.channel.send("```리틀 플라티나 윙 3합\n에메랄드 20개\n천공의 깃털 20개```")
 
-    if message.content.startswith(f'{PREFIX}!진알파 조합식'):
+    if message.content.startswith(f'{PREFIX}진알파 조합식'):
         await message.channel.send("```알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개```")
 
-    if message.content.startswith(f'{PREFIX}!케루빔 조합식'):
+    if message.content.startswith(f'{PREFIX}케루빔 조합식'):
          await message.channel.send("```천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개```")
 
 try:
