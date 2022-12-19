@@ -14,14 +14,8 @@ client=discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.game(name='난 뚜뚜킹이야 !명령어를 입력해봐 !!'))
     print(f'Logged in as {client.user}.')
-        await client.change_presence(status=discord.Status.online)
-        game = discord.Game("시작하는 중...")
-        await client.change_presence(status=discord.Status.online, activity=game)
-        while True:
-        game = discord.Game("난 뚜뚜킹이야!!")
-        await client.change_presence(status=discord.Status.online, activity=game)
-        await asyncio.sleep(3)
     
 @client.event
 async def on_member_join(member):
