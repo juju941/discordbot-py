@@ -22,7 +22,6 @@ async def on_message(message):
         return
     
         if message.content.startswith("!명령어"):
-        channel = message.channel
         embed = discord.Embed(
         title = '아래는 명령어 목록이예요.',
         description = '명령어를 입력해봐요.',
