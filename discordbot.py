@@ -15,17 +15,20 @@ client = discord.Client()
 async def on_ready():
     print(f'Logged in as {client.user}.')
     
-@client.event
+@bot.event
 async def on_member_join(member):
-  guild = client.get_guild(1054347567892271234)
-  channel = guild.get_channel(1054347595348193340)
-  emb = discord.Embed(title="NEW MEMBER",description=f"Thanks {member.name} for joining!")
-  await channel.send(member.mention, embed=emb)
+    welcome_channel = bot.get_channel(1054347595348193340)
+    print(f"{member} has joined!")
+    await welcome_channel.send(f"{member.mention} has joined the server! Thank you")
+    try:
+        await member.send(f"Hey {member.display_name}! Thank you for joining the server")
+    except:
+        await welcome_channel.send(f"{member.mention} I can't dm you, but thank you for joining!")
 
-@client.event
-async def on_member_remove(member):
-   await client.get_channel(1054347595348193340).send(f"{member.name} has left")
-
+        
+    role = discord.utils.get(member.server.roles, name="name-of-your-role") #  Gets the member role as a `role` object
+    await client.add_roles(member, role) # Gives the role to the user
+    print("Added role '" + role.name + "' to " + member.name)
 @client.event
 async def on_message(message):
     if message.author == client.user:
