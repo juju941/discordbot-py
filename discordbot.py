@@ -16,13 +16,11 @@ async def on_ready():
     
 @client.event
 async def on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name="ㅇㅇㅇ")
-    await channel.send(f"{member.mention} has just joined the server!")
+   await client.get_channel(1054347595348193340).send(f"{member.name} has joined")
 
 @client.event
 async def on_member_remove(member):
-    channel = discord.utils.get(member.guild.channels, name="ㅇㅇㅇ")
-    await channel.send(f"{member.mention} has left the server.")
+   await client.get_channel(1054347595348193340).send(f"{member.name} has left")
 
 @client.event
 async def on_message(message):
