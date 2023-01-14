@@ -60,11 +60,11 @@ async def on_message(message):
         await message.channel.send(embed=embed)
                             
     if message.content.startswith(f'{PREFIX}진알파 조합식'):
-        embed=discord.Embed(title="진알파 조합식", description="진알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
+        embed=discord.Embed(title="진알파 조합식", description="알파 윙 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0x5385ea)
         await message.channel.send(embed=embed)
 
-    if message.content.startswith(f'{PREFIX}케루빔 조합식'):
-        embed=discord.Embed(title="케루빔 조합식", description="천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0xa9aeb7)
+    if message.content.startswith(f'{PREFIX}암대천 조합식'):
+        embed=discord.Embed(title="암대천 조합식", description="천사날개 3합 1개\n흑해진보 40개\n쿠로이 깃털 1개", color=0xa9aeb7)
         await message.channel.send(embed=embed)
 
 try:
