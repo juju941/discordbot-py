@@ -20,7 +20,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     print("member join")
-    channel = client.get_channel(808342847748440084)
+    channel = client.get_channel(1068455687564316762)
     welcomembed=discord.Embed(title="환-영", description=f"{member.name}님", color=0xffae00)
     await channel.send(f"{member.mention}님, 암명서버에 어서오세요!")
     
